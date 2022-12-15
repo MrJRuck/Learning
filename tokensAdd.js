@@ -1,4 +1,4 @@
-/* I don't know why it isnt adding any tokens. Could someone please tell me why?*/
+
 let tokenAmountAdded = 0;
 
 function tokenFunc(addTokens) {
