@@ -2,7 +2,7 @@
 let tokenAmountAdded = 0;
 
 function tokenFunc(addTokens) {
-    addTokens.amount = tokenAmountAdded;
+    addTokens.tokensAmount = tokenAmountAdded;
 }
 
 const MRJRUCK = {
@@ -13,10 +13,13 @@ const MRJRUCK = {
 
 function tokensEarned(tokensEarnedObject) {
     tokensEarnedObject.amount = 50;
+    return tokensEarnedObject;
 }
-tokenAmountAdded = tokensEarned.amount;
 
-console.log(MRJRUCK.tokensAmount);
+const tokensEarnedResult = tokensEarned(MRJRUCK);
+tokenAmountAdded = tokensEarnedResult.amount;
+
+console.log(MRJRUCK.tokensAmount); // 0
 
 tokenFunc(MRJRUCK);
-console.log(MRJRUCK.tokensAmount);
+console.log(MRJRUCK.tokensAmount); // 50
